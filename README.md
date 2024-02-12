@@ -1,16 +1,17 @@
-﻿Content:
+﻿# Content:
 
 1. Exploratory data analysis summary
 2. Model description
 3. Data preparation and input pipeline
 4. Project deployment
 5. Summary
-
-1. Exploratory data analysis summary:
+ \
+ \
+# 1. Exploratory data analysis summary:
 
 The dataset of square images 768x768 pixels. Most of the images do not contain ships the rest contain from 1 to 15 ships. Labels are provided in .csv file, where each row contains image filename and ship position in run-length encoding format. Overall, there are 81723 ships on 192556 images. All images have same size. 
 
-2. Model description
+# 2. Model description
 
 The model implements U-net architecture for neural network. (<https://arxiv.org/abs/1505.04597>).
 
@@ -30,7 +31,7 @@ Learning policy: The model weights are initialized using Glorot method. The lear
 
 The model graph is given in “modelgraph” folder, filename: “model\_grapn.png”
 
-3. Data preparation and input pipeline
+# 3. Data preparation and input pipeline
 
 The labels are in run-length encoding format, so they are decoded and saved on disk as .jpg images containing grayscale mask of ships. The mask name matches the original image name, so in order to make the training dataset it is necessary to get full list of training images names from label file.
 
@@ -44,7 +45,7 @@ Data augmentation: Each image is flipped horizontally, vertically, or both horiz
 
 Batch size: 8 images.
 
-4. Project deployment:
+# 4. Project deployment:
 
 File requirements.txt is provided for downloading all required dependencies into virtual environment.
 
@@ -58,7 +59,7 @@ CUDA: 11.2
 
 cuDNN: 8.1
 
-5. Summary:
+# 5. Summary:
 
 Kaggle private score: 0.75142
 
