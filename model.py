@@ -144,6 +144,3 @@ def small_unet_train(train_data, val_data, epochs):
                    callbacks=callbacks
                    )
     small_unet.save_weights('./model/last_small_unet.h5')
-
-img_file = './/modelgraph//model_grapg.png'
-tf.keras.utils.plot_model(small_unet, to_file=img_file, show_shapes=True, show_layer_names=True)
